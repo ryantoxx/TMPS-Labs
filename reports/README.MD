@@ -167,7 +167,7 @@ void Adopter::applyForAdoption(IAdoptionCenter* center, const std::string& anima
 
 ## Results:
 
-![Running the simulation]()
+![Running the simulation](https://github.com/ryantoxx/TMPS-Labs/blob/main/imgs/result.png)
 
 ## Conclusion:
 In conclusion the SOLID principles are a great way of improving the code, this principles provide a set of rules that keep the code robust, adaptable and maintainable. These principles emphasizes fundamental aspects of software design, improving the development of clean, extensible and easily understandable code.
