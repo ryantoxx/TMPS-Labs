@@ -56,28 +56,19 @@ Some examples of this kind of design patterns are:
 The AdoptionCenterSingleton class implements the singleton pattern.It ensures that there is only one instance of AdoptionCenter created by providing a static method(getInstance) that creates the instance if it doesn't exist. 
 ```cpp
 class AdoptionCenterSingleton {
-public:
-    // Static method to access the singleton instance
-    static AdoptionCenter* getInstance() {
-        // Create the instance if it doesn't exist
-        if (instance == nullptr) {
-            instance = new AdoptionCenter("Pet Adoption Center");
-        }
-        return instance;
-    }
-
 private:
-    // Private constructor to prevent direct instantiation
+    
     AdoptionCenterSingleton() {}
 
-    static AdoptionCenter* instance; // Singleton instance
+    static AdoptionCenter* instance; // singleton instance
 
-    // Prevent copying of the Singleton instance
     AdoptionCenterSingleton(const AdoptionCenterSingleton&) = delete;
     AdoptionCenterSingleton& operator=(const AdoptionCenterSingleton&) = delete;
-};
+public:
+    
+    static AdoptionCenter* getInstance();
 
-AdoptionCenter* AdoptionCenterSingleton::instance = nullptr;
+};
 
 ```
 
