@@ -10,6 +10,9 @@ enum AccessLevel {
 };
 
 class AdoptionCenterProxy : public IAdoptionCenter {
+private:
+    AdoptionCenter* realCenter;
+    AccessLevel accessLevel;
 public:
     AdoptionCenterProxy(const std::string& name, AccessLevel level);
     std::string getName() const override;
@@ -17,10 +20,6 @@ public:
     void displayAnimals() const override;
     IAnimal* adoptAnimal(const std::string& animalName) override;
     ~AdoptionCenterProxy();
-
-private:
-    AdoptionCenter* realCenter;
-    AccessLevel accessLevel;
 };
 
 #endif 
