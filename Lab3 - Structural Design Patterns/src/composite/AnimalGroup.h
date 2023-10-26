@@ -6,6 +6,9 @@
 #include "../animals/IAnimal.h"
 
 class AnimalGroup : public IAnimal {
+private:
+    std::string groupName;
+    std::vector<IAnimal*> animals;
 public:
     AnimalGroup(const std::string& groupName);
 
@@ -18,10 +21,6 @@ public:
     void display() const override;
 
     void makeSound() const override;
-
-private:
-    std::string groupName;
-    std::vector<IAnimal*> animals;
 };
 
 #endif 
